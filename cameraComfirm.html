@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Camera Verification</title>
+    <link rel="stylesheet" href="style/cameraComfirm.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="images/smile_face.svg" alt="smile face" class="logo" />
+        <h1 class="title">
+          Please verify that your camera<br />
+          is functioning properly
+        </h1>
+      </div>
+      <div class="camera-container">
+        <video id="video" autoplay></video>
+        <div class="overlay">
+          <p>Please keep your entire face within the framed</p>
+          <div class="circle"></div>
+        </div>
+      </div>
+      <button id="finish-btn">Finish</button>
+    </div>
+
+    <script src="script/cameraComfirm.js"></script>
+  </body>
+</html>

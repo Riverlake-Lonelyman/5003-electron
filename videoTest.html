@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video and Camera Capture</title>
+    <link rel="stylesheet" href="style/videoTest.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="images/smile_face.svg" alt="smile face" class="logo" />
+        <h1 class="title">Let's commence.</h1>
+      </div>
+      <div class="video-container">
+        <video id="video-player" controls autoplay></video>
+      </div>
+    </div>
+
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <img src="images/smile_face.svg" alt="Smile Icon" />
+        <h2>NO. <span id="video-id"></span></h2>
+        <button id="exit-btn">Exit and upload images</button>
+      </div>
+    </div>
+
+    <script src="script/videoTest.js"></script>
+  </body>
+</html>

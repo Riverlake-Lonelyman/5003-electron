@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../images/welcome_bg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 900px;
+  padding: 20px;
+  text-align: left;
+  position: relative;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.title {
+  color: #f4a000;
+  font-size: 48px;
+}
+
+.subtitle {
+  color: #2c3e50;
+  font-size: 32px;
+}
+
+.precautions-box {
+  background-color: #f0f8ff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.precautions-title {
+  font-size: 26px;
+  color: #3a9bdc;
+  text-align: left;
+}
+
+.precautions-logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.precautions-logo,
+.precautions-title {
+  display: inline-block;
+  vertical-align: middle; /* 使它们在垂直方向上对齐 */
+}
+
+.precautions-text {
+  font-size: 18px;
+  color: #333;
+  text-align: left;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.precautions-list {
+  text-align: left;
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+
+.precautions-list li {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+}
+
+.disagree {
+  background-color: #f36c21;
+  color: white;
+}
+
+.agree {
+  background-color: #4bbfdd;
+  color: white;
+}
