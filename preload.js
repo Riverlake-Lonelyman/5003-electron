@@ -1,9 +1,12 @@
 const { contextBridge, ipcRenderer } = require("electron");
 
-contextBridge.exposeInMainWorld('electronAPI', {
-  getVersions: () => ({
-    chrome: process.versions.chrome,
-    node: process.versions.node,
-    electron: process.versions.electron,
-  }),
+contextBridge.exposeInMainWorld('myAPI', {
+  saveImage: (blob, video_id) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      const buffer = Buffer.from(reader.result);
+      ipcRenderer.send('save-image', buffer, video_id);
+    };
+    reader.readAsArrayBuffer(blob);
+  }
 });

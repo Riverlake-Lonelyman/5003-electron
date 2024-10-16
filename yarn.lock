@@ -5,6 +5,14 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
+"5003-electron@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "5003-electron@workspace:."
+  dependencies:
+    electron: "npm:^33.0.0"
+  languageName: unknown
+  linkType: soft
+
 "@electron/get@npm:^2.0.0":
   version: 2.0.3
   resolution: "@electron/get@npm:2.0.3"
@@ -533,14 +541,6 @@ __metadata:
   checksum: 10c0/5d48aca287dfefabd756621c5dfce5c91a549a93e9fdb7b8246bc4c4790aa2ec17b34a260530474635147aeb631a2dcc8b32c613df0675f96041cbb8244517d0
   languageName: node
   linkType: hard
-
-"opencv_test@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "opencv_test@workspace:."
-  dependencies:
-    electron: "npm:^33.0.0"
-  languageName: unknown
-  linkType: soft
 
 "p-cancelable@npm:^2.0.0":
   version: 2.1.1
