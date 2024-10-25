@@ -9,9 +9,9 @@ app.whenReady().then(() => {
     width: 800,
     height: 600,
     frame: false,
-    icon: "images/smile_face.svg",
+    icon: path.join(app.getAppPath(), 'logo.ico'),
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js'), // preload script
+      preload: path.join(app.getAppPath(), 'preload.js')
     }
   });
 
@@ -23,9 +23,8 @@ app.whenReady().then(() => {
   });
 });
 
-// Listen for the 'save-image' event from the renderer process in the main process
 ipcMain.on('save-image', (event, buffer, video_id) => {
-  const folderPath = path.join(__dirname, 'capture', String(video_id)); // save to 'capture/video_id' folder
+  const folderPath = path.join(app.getPath('documents'), '5003-electron Capture', String(video_id));
   const fileName = `${video_id}_${Date.now()}.jpg`;
   const filePath = path.join(folderPath, fileName);
 
@@ -40,6 +39,7 @@ ipcMain.on('save-image', (event, buffer, video_id) => {
     }
   });
 });
+
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {

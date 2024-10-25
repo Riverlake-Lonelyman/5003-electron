@@ -5,7 +5,7 @@ const popup = document.getElementById("popup");
 let screenshotCount = 0;
 
 const video_id = Math.floor(Math.random() * 12) + 1;
-const selectedVideo = `videos/${video_id}.MP4`;
+const selectedVideo = `videos/${video_id}.mp4`;
 videoPlayer.src = selectedVideo;
 videoIdSpan.textContent = video_id;
 
@@ -59,14 +59,14 @@ function processFrame(bitmap, video_id) {
     size
   );
 
-  // 将Canvas图像转换为Blob并存储
+  // Convert the Canvas image to a Blob and store it
   canvas.toBlob((blob) => {
-    window.myAPI.saveImage(blob, video_id); // 调用 preload.js 中暴露的 myAPI.saveImage 方法
+    window.myAPI.saveImage(blob, video_id); // Call the myAPI.saveImage method exposed in preload.js
   }, "image/jpeg");
 }
 
 exitBtn.addEventListener("click", () => {
-  window.location.href = `testFinish.html?video_id=${video_id}`;
+  window.location.href = `./testFinish.html?video_id=${video_id}`;
 });
 
 videoPlayer.addEventListener("ended", () => {

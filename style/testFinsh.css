@@ -6,7 +6,7 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #f9f9f9;
-    background-image: url("../images/welcome_bg.svg");
+    background-image: url("../assets/welcome_bg.svg");
     font-family: Arial, sans-serif;
 }
 

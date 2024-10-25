@@ -1,12 +1,7 @@
 {
   "name": "5003-electron",
-  "version": "0.1.1",
+  "packageManager": "npm@10.9.0",
   "description": "5003-electron",
-  "author": {
-    "name": "Riverlaker-Lonelyman",
-    "email": "fuguang_060419@qq.com"
-  },
-  "packageManager": "yarn@4.5.0",
   "main": "main.js",
   "build": {
     "productName": "5003-electron",
@@ -18,9 +13,7 @@
       "target": [
         {
           "target": "nsis",
-          "arch": [
-            "x64"
-          ]
+          "arch": "x64"
         }
       ]
     },
@@ -28,18 +21,61 @@
       "oneClick": false,
       "allowElevation": true,
       "allowToChangeInstallationDirectory": true,
-      "installerIcon": "logo.ico",
-      "uninstallerIcon": "./logo.ico",
-      "installerHeaderIcon": "./logo.ico",
+      "installerIcon": "./assets/logo.ico",
+      "uninstallerIcon": "./assets/logo.ico",
+      "installerHeaderIcon": "./assets/logo.ico",
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
       "shortcutName": "5003-electron"
+    },
+    "mac": {
+      "icon": "./assets/logo.icns",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "universal"
+          ]
+        }
+      ]
+    },
+    "dmg": {
+      "icon": "./assets/logo.icns",
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "icon": "./assets/logo.png",
+      "target": [
+        {
+          "target": "AppImage",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
     }
   },
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build:win": "electron-builder --win --x64",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux"
   },
+  "author": "YwY",
+  "license": "ISC",
   "devDependencies": {
-    "electron": "^33.0.0"
+    "electron": "33.0.2",
+    "electron-builder": "^25.1.8"
   }
 }

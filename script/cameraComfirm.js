@@ -12,5 +12,5 @@ navigator.mediaDevices.getUserMedia({ video: true })
 
 // Redirect to another page on Finish button click
 finishButton.addEventListener('click', () => {
-    window.location.href = 'videoTest.html';
+    window.location.href = './videoTest.html';
 });

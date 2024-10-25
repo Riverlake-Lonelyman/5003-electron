@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   continueButton.addEventListener("click", function () {
-    window.location.href = "index.html";
+    window.location.href = "./index.html";
   });
 
   quitButton.addEventListener("click", function () {
