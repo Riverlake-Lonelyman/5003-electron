@@ -86,12 +86,12 @@ body {
   margin-bottom: 10px;
 }
 
-.buttons {
+.button-div {
   display: flex;
   justify-content: space-around;
 }
 
-.btn {
+.buttons {
   padding: 10px 20px;
   font-size: 18px;
   border: none;
@@ -100,11 +100,19 @@ body {
 }
 
 .disagree {
-  background-color: #f36c21;
+  background-color: #ffaf46;
   color: white;
 }
 
 .agree {
   background-color: #4bbfdd;
   color: white;
+}
+
+.disagree:hover {
+  background-color: #ff7c46;
+}
+
+.disagree:active {
+  background-color: #ff6f5c;
 }

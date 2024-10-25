@@ -1,6 +1,7 @@
 {
   "name": "5003-electron",
   "packageManager": "npm@10.9.0",
+  "version": "0.1.2",
   "description": "5003-electron",
   "main": "main.js",
   "build": {
@@ -9,7 +10,7 @@
       "output": "out"
     },
     "win": {
-      "icon": "./logo.ico",
+      "icon": "./assets/logo.ico",
       "target": [
         {
           "target": "nsis",

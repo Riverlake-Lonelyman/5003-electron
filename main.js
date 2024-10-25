@@ -9,7 +9,7 @@ app.whenReady().then(() => {
     width: 800,
     height: 600,
     frame: false,
-    icon: path.join(app.getAppPath(), 'logo.ico'),
+    icon: path.join(app.getAppPath(), 'assets', 'logo.ico'),
     webPreferences: {
       preload: path.join(app.getAppPath(), 'preload.js')
     }
@@ -44,11 +44,5 @@ ipcMain.on('save-image', (event, buffer, video_id) => {
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit();
-  }
-});
-
-app.on('activate', () => {
-  if (BrowserWindow.getAllWindows().length === 0) {
-    createWindow();
   }
 });
