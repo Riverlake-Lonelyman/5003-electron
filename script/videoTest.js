@@ -65,10 +65,17 @@ function processFrame(bitmap, video_id) {
   }, "image/jpeg");
 }
 
+function stopCameraStream() {
+  if (cameraStream) {
+    cameraStream.getTracks().forEach(track => track.stop());
+  }
+}
+
 exitBtn.addEventListener("click", () => {
   window.location.href = `./testFinish.html?video_id=${video_id}`;
 });
 
 videoPlayer.addEventListener("ended", () => {
+  stopCameraStream();
   popup.style.display = "block";
 });

@@ -24,7 +24,7 @@ app.whenReady().then(() => {
 });
 
 ipcMain.on('save-image', (event, buffer, video_id) => {
-  const folderPath = path.join(app.getPath('documents'), '5003-electron Capture', String(video_id));
+  const folderPath = path.join(app.getPath('documents'), '5003-electron Captures', String(video_id));
   const fileName = `${video_id}_${Date.now()}.jpg`;
   const filePath = path.join(folderPath, fileName);
 

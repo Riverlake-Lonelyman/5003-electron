@@ -1,4 +1,4 @@
-<p align="center"><img alt="logo" src="images/smile_face.svg" title="Logo" width="100" /></p>
+<p align="center"><img alt="logo" src="./assets/smile_face.svg" title="Logo" width="100" /></p>
 
 # <p align="center">5003-electron</p>
 <p align="center">
@@ -21,9 +21,12 @@
 ### From Release as user
 
 1. After download the compressed file, unzip it, find and double-click to run <code>5003-electron.exe</code>.
+
 2. Follow the software instructions step by step; you may be prompted to keep the camera and relevant permissions enabled.
-3. For Windows users, locate the relevant image data samples in the "C:\Users{your_user_name}\Documents" directory, specifically in the "5003-electron Captures" folder within "Documents" in Windows Explorer. Please compress this folder as "5003-electron Capture.zip" and send it as an attachment to fuguang_060419@qq.com with the subject line "5003-electron Captures."
-4. Thank you for your support of our project, ☆: .｡. o(≧▽≦)o .｡.:☆
+
+3. For Windows users, locate the relevant image data samples in the <code>C:\\Users\\{your_user_name}\\Documents</code> directory, specifically in the <code>5003-electron Captures</code> folder within *Documents* in Windows Explorer. Please compress this folder as <code>5003-electron Capture.zip</code> and send it as an attachment to *fuguang_060419@qq.com* with the subject line *5003-electron Captures*.
+
+4. Thank you for your support of our project! ☆: .｡. o(≧▽≦)o .｡.:☆
 
 ### From Source Code as developer
 
@@ -45,7 +48,7 @@ npm install
 ```
 
 #### 4. Run
-Use <code>yarn start</code> to run the application. For more usage about <code>yarn</code>, click <a href="https://yarnpkg.com/getting-started/usage">here</a>.
+Use <code>npm run start</code> to run the application. For more usage about <code>npm</code>, click <a href="https://docs.npmjs.com/cli/v10/commands">here</a>.
 ```bash
 npm run start
 ```
